@@ -7,16 +7,18 @@ using UnityEngine.EventSystems;
 public class ShowMenu : MonoBehaviour, IPointerClickHandler
 {
     public Vector3 pointerPos;
-    public bool showMenu = false;
     public Camera cam;
+    public GameObject menuPrefab;
+    public bool menuShown = false;
     public void OnPointerClick(PointerEventData eventData)
     {
         if (eventData.button == PointerEventData.InputButton.Right)
         {
             Debug.Log("Right Mouse Button Clicked");
-            showMenu = true;
             pointerPos = Input.mousePosition;
+            menuShown = true;
             Debug.Log("target is at (" + pointerPos.x + ", " + pointerPos.y + ")");
+            Instantiate(menuPrefab, pointerPos, Quaternion.identity);
         }
     }
 
