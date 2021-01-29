@@ -191,6 +191,8 @@ namespace DevionGames.UIWidgets
 			WidgetUtility.PlaySound (closeSound, 1.0f);
 			m_CanvasGroup.interactable = false;
 			m_CanvasGroup.blocksRaycasts = false;
+			GameObject initParent = this.transform.parent.gameObject;
+			Destroy(initParent);
 			if (onClose != null) {
 				onClose.Invoke ();
 			}
