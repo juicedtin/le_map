@@ -181,17 +181,17 @@ namespace DevionGames.UIWidgets
 		/// </summary>
 		public virtual void Close ()
 		{
-            if (!m_IsShowing) {
+            /*if (!m_IsShowing) {
                 return;
             }
             m_IsShowing = false;
 			TweenCanvasGroupAlpha (m_CanvasGroup.alpha, 0f);
-			TweenTransformScale (m_RectTransform.localScale, Vector3.zero);
+			TweenTransformScale (m_RectTransform.localScale, Vector3.zero);*/
 			
 			WidgetUtility.PlaySound (closeSound, 1.0f);
-			m_CanvasGroup.interactable = false;
-			m_CanvasGroup.blocksRaycasts = false;
-			GameObject initParent = this.transform.parent.gameObject;
+			//m_CanvasGroup.interactable = false;
+			//m_CanvasGroup.blocksRaycasts = false;
+			GameObject initParent = this.transform.gameObject;
 			Destroy(initParent);
 			if (onClose != null) {
 				onClose.Invoke ();

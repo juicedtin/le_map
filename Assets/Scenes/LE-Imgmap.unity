@@ -489,8 +489,7 @@ MonoBehaviour:
   pointerPos: {x: 0, y: 0, z: 0}
   cam: {fileID: 810935981}
   menuParent: {fileID: 1367690648}
-  menuPrefab: {fileID: 8870446333795893, guid: c189cb72ad649c94591b45caf3f84d79, type: 3}
-  menuShown: 0
+  menuPrefab: {fileID: 0}
 --- !u!61 &1367690653
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -548,6 +547,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tab Window
       objectReference: {fileID: 0}
+    - target: {fileID: 8870446333795913, guid: c189cb72ad649c94591b45caf3f84d79, type: 3}
+      propertyPath: m_DeactivateOnClose
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8870446333795914, guid: c189cb72ad649c94591b45caf3f84d79, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -594,11 +597,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8870446333795914, guid: c189cb72ad649c94591b45caf3f84d79, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 3.019
+      value: 5.47
       objectReference: {fileID: 0}
     - target: {fileID: 8870446333795914, guid: c189cb72ad649c94591b45caf3f84d79, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.66
+      value: 1.61
       objectReference: {fileID: 0}
     - target: {fileID: 8870446333795914, guid: c189cb72ad649c94591b45caf3f84d79, type: 3}
       propertyPath: m_SizeDelta.x
