@@ -15,6 +15,7 @@ public class ConfirmReadout : MonoBehaviour
     public GameObject textsource3;
     public GameObject textsource4;
     public GameObject drscheck;
+    public GameObject canvas;
     public string drs;
     public string concat; 
     public int quadrant; 
@@ -28,7 +29,7 @@ public class ConfirmReadout : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        quadrant = canvas.GetComponent<ShowMenu>().quadrant;
     }
 
     void TaskOnClick()
