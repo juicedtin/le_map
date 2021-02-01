@@ -14,7 +14,8 @@ public class ConfirmReadout : MonoBehaviour
     public GameObject textsource2;
     public GameObject textsource3;
     public GameObject textsource4;
-    public GameObject drs;
+    public GameObject drscheck;
+    public string drs;
     public string concat; 
     public int quadrant; 
     // Start is called before the first frame update
@@ -32,8 +33,16 @@ public class ConfirmReadout : MonoBehaviour
 
     void TaskOnClick()
     {
-        concat = "Edema Severity: " + textsource1.GetComponent<Text>().text + " | Additional Notes: " + textsource2.GetComponent<Text>().text + "\n" + "Fat Severity: " + textsource3.GetComponent<Text>().text + " | Additional Notes: " + textsource4.GetComponent<Text>().text;
+        if (drscheck.GetComponent<Toggle>().isOn)
+        {
+            drs = "Dermal Rim Sign Present";
+        } else
+        {
+            drs = "Dermal Rim Sign Not Present";
+        }
+        concat = "Edema Severity: " + textsource1.GetComponent<Text>().text + " | Additional Notes: " + textsource2.GetComponent<Text>().text + "\n" + "Fat Severity: " + textsource3.GetComponent<Text>().text + " | Additional Notes: " + textsource4.GetComponent<Text>().text + "\n" + drs;
         Debug.Log("triggered, readout ported");
+        Debug.Log(concat);
         switch (quadrant)
         {
             case 1:
