@@ -1620,37 +1620,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_MaxRayIntersections: 0
---- !u!1 &866871233 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4949009205370548645, guid: c189cb72ad649c94591b45caf3f84d79, type: 3}
-  m_PrefabInstance: {fileID: 3260705689999597674}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &866871234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866871233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f37fffc38812df1409959ec7b7dfaf8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetButton: {fileID: 1971181111}
-  targetq1: {fileID: 1166197543}
-  targetq2: {fileID: 1641324090}
-  targetq3: {fileID: 2122432998}
-  targetq4: {fileID: 1457264803}
-  textsource1: {fileID: 1264492677}
-  textsource2: {fileID: 561937173}
-  textsource3: {fileID: 1056566727}
-  textsource4: {fileID: 109664293}
-  drscheck: {fileID: 783107250}
-  canvas: {fileID: 1367690647}
-  drs: 
-  concat: 
-  quadrant: 0
 --- !u!1 &978083887
 GameObject:
   m_ObjectHideFlags: 0
