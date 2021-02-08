@@ -325,11 +325,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2208719156977180862, guid: c53417754d1ed2246820c449138390f5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -6.8
+      value: 42.1
       objectReference: {fileID: 0}
     - target: {fileID: 2208719156977180862, guid: c53417754d1ed2246820c449138390f5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -3.05
+      value: -33
       objectReference: {fileID: 0}
     - target: {fileID: 2208719156977180862, guid: c53417754d1ed2246820c449138390f5, type: 3}
       propertyPath: m_SizeDelta.x
@@ -365,15 +365,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2208719156977180862, guid: c53417754d1ed2246820c449138390f5, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.011052988
+      value: 0.064456604
       objectReference: {fileID: 0}
     - target: {fileID: 2208719156977180862, guid: c53417754d1ed2246820c449138390f5, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.011052988
+      value: 0.064456604
       objectReference: {fileID: 0}
     - target: {fileID: 2208719156977180862, guid: c53417754d1ed2246820c449138390f5, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.011052988
+      value: 0.064456604
       objectReference: {fileID: 0}
     - target: {fileID: 2208719156977180863, guid: c53417754d1ed2246820c449138390f5, type: 3}
       propertyPath: m_Name
@@ -503,6 +503,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6191168153009795043, guid: c53417754d1ed2246820c449138390f5, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6191168153009795043, guid: c53417754d1ed2246820c449138390f5, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6191168153067392366, guid: c53417754d1ed2246820c449138390f5, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
@@ -694,6 +702,14 @@ PrefabInstance:
     - target: {fileID: 6191168153548986908, guid: c53417754d1ed2246820c449138390f5, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6191168153548986910, guid: c53417754d1ed2246820c449138390f5, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6191168153548986910, guid: c53417754d1ed2246820c449138390f5, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191168153554472200, guid: c53417754d1ed2246820c449138390f5, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1115,6 +1131,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6191168154380089723, guid: c53417754d1ed2246820c449138390f5, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6191168154380089723, guid: c53417754d1ed2246820c449138390f5, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6191168154420241763, guid: c53417754d1ed2246820c449138390f5, type: 3}
       propertyPath: m_SizeDelta.x
       value: 259.27
@@ -1207,6 +1231,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6191168154484032356, guid: c53417754d1ed2246820c449138390f5, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6191168154484032356, guid: c53417754d1ed2246820c449138390f5, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6191168154538243869, guid: c53417754d1ed2246820c449138390f5, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
@@ -1251,6 +1283,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6191168154563772470, guid: c53417754d1ed2246820c449138390f5, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6191168154563772470, guid: c53417754d1ed2246820c449138390f5, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6191168154571178675, guid: c53417754d1ed2246820c449138390f5, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
@@ -1298,6 +1338,14 @@ PrefabInstance:
     - target: {fileID: 6191168154622610730, guid: c53417754d1ed2246820c449138390f5, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6191168154622610732, guid: c53417754d1ed2246820c449138390f5, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6191168154622610732, guid: c53417754d1ed2246820c449138390f5, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191168154741324370, guid: c53417754d1ed2246820c449138390f5, type: 3}
       propertyPath: m_AnchorMin.y
@@ -1553,13 +1601,13 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1
+    width: 0.5
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 55
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1662,7 +1710,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 611c0fd2bc32efe42acee981745f0f33, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4c0313cdd608b7244a27d73d0bb741df, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
