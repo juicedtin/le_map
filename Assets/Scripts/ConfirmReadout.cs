@@ -6,19 +6,16 @@ using UnityEngine.UI;
 public class ConfirmReadout : MonoBehaviour
 {
     public Button targetButton;
-    public GameObject targetq1;
-    public GameObject targetq2;
-    public GameObject targetq3;
-    public GameObject targetq4;
-    public GameObject textsource1;
-    public GameObject textsource2;
-    public GameObject textsource3;
-    public GameObject textsource4;
+    public GameObject targetUA;
+    public GameObject targetLA;
+    public GameObject targetH;
+    public GameObject edemaSlider;
+    public GameObject fatSlider;
     public GameObject drscheck;
-    public GameObject canvas;
     public string drs;
     public string concat; 
-    public int quadrant; 
+    public string code;
+    public int loc;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +26,7 @@ public class ConfirmReadout : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        quadrant = canvas.GetComponent<ShowMenu>().quadrant;
+        
     }
 
     void TaskOnClick()
@@ -41,22 +38,19 @@ public class ConfirmReadout : MonoBehaviour
         {
             drs = "Dermal Rim Sign Not Present";
         }
-        concat = "Edema Severity: " + textsource1.GetComponent<Text>().text + " | Additional Notes: " + textsource2.GetComponent<Text>().text + "\n" + "Fat Severity: " + textsource3.GetComponent<Text>().text + " | Additional Notes: " + textsource4.GetComponent<Text>().text + "\n" + drs;
+        concat = code + ": Edema Severity: " + edemaSlider.GetComponent<Slider>().value + "Fat Severity: " + fatSlider.GetComponent<Slider>().value + drs;
         Debug.Log("triggered, readout ported");
         Debug.Log(concat);
-        switch (quadrant)
+        switch (loc)
         {
             case 1:
-                targetq1.GetComponent<Text>().text = concat;
+                targetUA.GetComponent<Text>().text += concat;
                 break;
             case 2:
-                targetq2.GetComponent<Text>().text = concat;
+                targetLA.GetComponent<Text>().text += concat;
                 break;
             case 3:
-                targetq3.GetComponent<Text>().text = concat;
-                break;
-            case 4:
-                targetq4.GetComponent<Text>().text = concat;
+                targetH.GetComponent<Text>().text += concat;
                 break;
         }
     }
