@@ -38,20 +38,37 @@ public class ConfirmReadout : MonoBehaviour
         {
             drs = "Dermal Rim Sign Not Present";
         }
-        concat = code + ": Edema Severity: " + edemaSlider.GetComponent<Slider>().value + "Fat Severity: " + fatSlider.GetComponent<Slider>().value + drs;
-        Debug.Log("triggered, readout ported");
+        concat = code + ": Edema Severity: " + edemaSlider.GetComponent<Slider>().value + " Fat Severity: " + fatSlider.GetComponent<Slider>().value + " " + drs + System.Environment.NewLine;
+        Debug.Log("Triggered, readout ported");
         Debug.Log(concat);
         switch (loc)
         {
             case 1:
+                targetUA.GetComponent<Text>().text = overwriteReadout(targetUA.GetComponent<Text>().text, code);
                 targetUA.GetComponent<Text>().text += concat;
                 break;
             case 2:
+                targetLA.GetComponent<Text>().text = overwriteReadout(targetLA.GetComponent<Text>().text, code);
                 targetLA.GetComponent<Text>().text += concat;
                 break;
             case 3:
+                targetH.GetComponent<Text>().text = overwriteReadout(targetH.GetComponent<Text>().text, code);
                 targetH.GetComponent<Text>().text += concat;
                 break;
         }
+    }
+
+    string overwriteReadout(string readout, string code)
+    {
+        int indexStart = readout.IndexOf(code);
+        int deleteIndex = readout.IndexOf("\n") - indexStart;
+        if (indexStart == -1)
+        {
+            return readout;
+        }
+        Debug.Log(deleteIndex + " " + indexStart);
+        readout = readout.Remove(indexStart, deleteIndex+1);
+        Debug.Log(readout);
+        return readout;
     }
 }
