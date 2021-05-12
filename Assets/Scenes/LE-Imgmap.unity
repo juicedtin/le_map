@@ -298,8 +298,8 @@ MonoBehaviour:
   drscheck: {fileID: 178707101}
   drs: 
   concat: 
-  code: Right Medial Upper Arm
-  loc: 1
+  code: Lower Arm - Lower Right Radial
+  loc: 2
 --- !u!1001 &190378524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1926,8 +1926,8 @@ MonoBehaviour:
   drscheck: {fileID: 200513586}
   drs: 
   concat: 
-  code: Right Medial Upper Arm
-  loc: 1
+  code: Lower Arm - Upper Right Ulnar
+  loc: 2
 --- !u!1001 &224821064
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2098,7 +2098,7 @@ MonoBehaviour:
   drscheck: {fileID: 224821067}
   drs: 
   concat: 
-  code: Right Medial Upper Arm
+  code: Upper Arm - Lower Left Medial
   loc: 1
 --- !u!1001 &226383984
 PrefabInstance:
@@ -2270,8 +2270,8 @@ MonoBehaviour:
   drscheck: {fileID: 226383987}
   drs: 
   concat: 
-  code: Right Medial Upper Arm
-  loc: 1
+  code: Lower Arm - Lower Right Ventral
+  loc: 2
 --- !u!1001 &229997920
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2442,7 +2442,7 @@ MonoBehaviour:
   drscheck: {fileID: 229997923}
   drs: 
   concat: 
-  code: Right Medial Upper Arm
+  code: Upper Arm - Lower Left Lateral
   loc: 1
 --- !u!1001 &365965971
 PrefabInstance:
@@ -2614,7 +2614,7 @@ MonoBehaviour:
   drscheck: {fileID: 365965974}
   drs: 
   concat: 
-  code: Right Anterior Upper Arm
+  code: Upper Arm - Lower Right Anterior
   loc: 1
 --- !u!1001 &511737177
 PrefabInstance:
@@ -2786,8 +2786,8 @@ MonoBehaviour:
   drscheck: {fileID: 511737180}
   drs: 
   concat: 
-  code: Right Medial Upper Arm
-  loc: 1
+  code: Lower Arm - Lower Right Dorsal
+  loc: 2
 --- !u!1001 &598201589
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2958,8 +2958,8 @@ MonoBehaviour:
   drscheck: {fileID: 598201592}
   drs: 
   concat: 
-  code: Right Medial Upper Arm
-  loc: 1
+  code: Lower Arm - Lower Left Ulnar
+  loc: 2
 --- !u!1001 &618731211
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3130,7 +3130,7 @@ MonoBehaviour:
   drscheck: {fileID: 618731214}
   drs: 
   concat: 
-  code: Right Medial Upper Arm
+  code: Upper Arm - Upper Right Medial
   loc: 1
 --- !u!1001 &782547207
 PrefabInstance:
@@ -3302,8 +3302,8 @@ MonoBehaviour:
   drscheck: {fileID: 782547210}
   drs: 
   concat: 
-  code: Right Medial Upper Arm
-  loc: 1
+  code: Lower Arm - Lower Left Ventral
+  loc: 2
 --- !u!1 &810935979
 GameObject:
   m_ObjectHideFlags: 0
@@ -3574,8 +3574,8 @@ MonoBehaviour:
   drscheck: {fileID: 814035560}
   drs: 
   concat: 
-  code: Right Medial Upper Arm
-  loc: 1
+  code: Lower Arm - Upper Left Radial
+  loc: 2
 --- !u!1001 &855158625
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3746,7 +3746,7 @@ MonoBehaviour:
   drscheck: {fileID: 855158628}
   drs: 
   concat: 
-  code: Left Medial Upper Arm
+  code: Upper Arm - Upper Left Medial
   loc: 1
 --- !u!1001 &905134531
 PrefabInstance:
@@ -3918,7 +3918,7 @@ MonoBehaviour:
   drscheck: {fileID: 905134534}
   drs: 
   concat: 
-  code: Right Posterior Upper Arm
+  code: Upper Arm - Lower Right Posterior
   loc: 1
 --- !u!1001 &951850262
 PrefabInstance:
@@ -4090,7 +4090,7 @@ MonoBehaviour:
   drscheck: {fileID: 951850265}
   drs: 
   concat: 
-  code: Right Posterior Upper Arm
+  code: Upper Arm - Upper Right Posterior
   loc: 1
 --- !u!1 &978083887
 GameObject:
@@ -4411,7 +4411,7 @@ MonoBehaviour:
   drscheck: {fileID: 1093972452}
   drs: 
   concat: 
-  code: Right Medial Upper Arm
+  code: Upper Arm - Lower Right Medial
   loc: 1
 --- !u!1001 &1266898187
 PrefabInstance:
@@ -4583,7 +4583,7 @@ MonoBehaviour:
   drscheck: {fileID: 1266898190}
   drs: 
   concat: 
-  code: Right Medial Upper Arm
+  code: Upper Arm - Lower Left Posterior
   loc: 1
 --- !u!1001 &1342731820
 PrefabInstance:
@@ -4755,8 +4755,8 @@ MonoBehaviour:
   drscheck: {fileID: 1342731823}
   drs: 
   concat: 
-  code: Right Medial Upper Arm
-  loc: 1
+  code: Lower Arm - Upper Left Ulnar
+  loc: 2
 --- !u!1 &1367690647
 GameObject:
   m_ObjectHideFlags: 0
@@ -5090,7 +5090,7 @@ MonoBehaviour:
   drscheck: {fileID: 1383976595}
   drs: 
   concat: 
-  code: Right Anterior Upper Arm
+  code: Upper Arm - Upper Right Anterior
   loc: 1
 --- !u!1001 &1393769509
 PrefabInstance:
@@ -5262,8 +5262,8 @@ MonoBehaviour:
   drscheck: {fileID: 1393769512}
   drs: 
   concat: 
-  code: Right Medial Upper Arm
-  loc: 1
+  code: Lower Arm - Upper Right Radial
+  loc: 2
 --- !u!1001 &1410347816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5434,7 +5434,7 @@ MonoBehaviour:
   drscheck: {fileID: 1410347819}
   drs: 
   concat: 
-  code: Left Lateral Upper Arm
+  code: Upper Arm - Upper Left Lateral
   loc: 1
 --- !u!1001 &1465391136
 PrefabInstance:
@@ -5550,6 +5550,14 @@ PrefabInstance:
     - target: {fileID: 2930890998304075974, guid: c0b55051dd2aff14cbc31ed2c6d98fe6, type: 3}
       propertyPath: drscheck
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2930890998304075974, guid: c0b55051dd2aff14cbc31ed2c6d98fe6, type: 3}
+      propertyPath: code
+      value: Left Hand - Posterior
+      objectReference: {fileID: 0}
+    - target: {fileID: 2930890998304075974, guid: c0b55051dd2aff14cbc31ed2c6d98fe6, type: 3}
+      propertyPath: loc
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6955089849005785231, guid: c0b55051dd2aff14cbc31ed2c6d98fe6, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5740,8 +5748,8 @@ MonoBehaviour:
   drscheck: {fileID: 1613129352}
   drs: 
   concat: 
-  code: Right Medial Upper Arm
-  loc: 1
+  code: Lower Arm - Upper Right Ventral
+  loc: 2
 --- !u!1001 &1734131519
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5912,8 +5920,8 @@ MonoBehaviour:
   drscheck: {fileID: 1734131522}
   drs: 
   concat: 
-  code: Right Medial Upper Arm
-  loc: 1
+  code: Lower Arm - Upper Right Dorsal
+  loc: 2
 --- !u!1001 &1759462544
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6084,7 +6092,7 @@ MonoBehaviour:
   drscheck: {fileID: 1759462547}
   drs: 
   concat: 
-  code: Right Lateral Upper Arm
+  code: Upper Arm - Upper Right Lateral
   loc: 1
 --- !u!1001 &1762039061
 PrefabInstance:
@@ -6256,7 +6264,7 @@ MonoBehaviour:
   drscheck: {fileID: 1762039064}
   drs: 
   concat: 
-  code: Left Posterior Upper Arm
+  code: Upper Arm - Upper Left Posterior
   loc: 1
 --- !u!1001 &1764007701
 PrefabInstance:
@@ -6428,8 +6436,8 @@ MonoBehaviour:
   drscheck: {fileID: 1764007704}
   drs: 
   concat: 
-  code: Right Medial Upper Arm
-  loc: 1
+  code: Lower Arm - Lower Right Ulnar
+  loc: 2
 --- !u!1001 &1769526081
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6600,8 +6608,8 @@ MonoBehaviour:
   drscheck: {fileID: 1769526084}
   drs: 
   concat: 
-  code: Right Medial Upper Arm
-  loc: 1
+  code: Lower Arm - Upper Left Dorsal
+  loc: 2
 --- !u!1001 &1815687444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6772,7 +6780,7 @@ MonoBehaviour:
   drscheck: {fileID: 1815687447}
   drs: 
   concat: 
-  code: Right Medial Upper Arm
+  code: Upper Arm - Lower Left Anterior
   loc: 1
 --- !u!1001 &1816150746
 PrefabInstance:
@@ -6944,8 +6952,8 @@ MonoBehaviour:
   drscheck: {fileID: 1816150749}
   drs: 
   concat: 
-  code: Right Medial Upper Arm
-  loc: 1
+  code: Lower Arm - Lower Left Dorsal
+  loc: 2
 --- !u!1001 &1835238255
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7116,8 +7124,8 @@ MonoBehaviour:
   drscheck: {fileID: 1835238258}
   drs: 
   concat: 
-  code: Right Medial Upper Arm
-  loc: 1
+  code: Lower Arm - Upper Left Ventral
+  loc: 2
 --- !u!1001 &1876663449
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7300,7 +7308,7 @@ MonoBehaviour:
   drscheck: {fileID: 1876663452}
   drs: 
   concat: 
-  code: Right Lateral Upper Arm
+  code: Upper Arm - Lower Right Lateral
   loc: 1
 --- !u!1001 &1902845443
 PrefabInstance:
@@ -7416,6 +7424,14 @@ PrefabInstance:
     - target: {fileID: 2930890998304075974, guid: c0b55051dd2aff14cbc31ed2c6d98fe6, type: 3}
       propertyPath: drscheck
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2930890998304075974, guid: c0b55051dd2aff14cbc31ed2c6d98fe6, type: 3}
+      propertyPath: code
+      value: Right Hand - Ventral
+      objectReference: {fileID: 0}
+    - target: {fileID: 2930890998304075974, guid: c0b55051dd2aff14cbc31ed2c6d98fe6, type: 3}
+      propertyPath: loc
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6955089849005785231, guid: c0b55051dd2aff14cbc31ed2c6d98fe6, type: 3}
       propertyPath: m_AnchorMax.y
@@ -7550,6 +7566,14 @@ PrefabInstance:
     - target: {fileID: 2930890998304075974, guid: c0b55051dd2aff14cbc31ed2c6d98fe6, type: 3}
       propertyPath: drscheck
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2930890998304075974, guid: c0b55051dd2aff14cbc31ed2c6d98fe6, type: 3}
+      propertyPath: code
+      value: Left Hand - Dorsal
+      objectReference: {fileID: 0}
+    - target: {fileID: 2930890998304075974, guid: c0b55051dd2aff14cbc31ed2c6d98fe6, type: 3}
+      propertyPath: loc
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6955089849005785231, guid: c0b55051dd2aff14cbc31ed2c6d98fe6, type: 3}
       propertyPath: m_AnchorMax.y
@@ -7740,8 +7764,8 @@ MonoBehaviour:
   drscheck: {fileID: 2067924786}
   drs: 
   concat: 
-  code: Right Medial Upper Arm
-  loc: 1
+  code: Lower Arm - Lower Right Radial
+  loc: 2
 --- !u!1 &2140674804 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7366102467074350713, guid: c53417754d1ed2246820c449138390f5, type: 3}
@@ -7861,6 +7885,14 @@ PrefabInstance:
     - target: {fileID: 2930890998304075974, guid: c0b55051dd2aff14cbc31ed2c6d98fe6, type: 3}
       propertyPath: drscheck
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2930890998304075974, guid: c0b55051dd2aff14cbc31ed2c6d98fe6, type: 3}
+      propertyPath: code
+      value: Right Hand - Dorsal
+      objectReference: {fileID: 0}
+    - target: {fileID: 2930890998304075974, guid: c0b55051dd2aff14cbc31ed2c6d98fe6, type: 3}
+      propertyPath: loc
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6955089849005785231, guid: c0b55051dd2aff14cbc31ed2c6d98fe6, type: 3}
       propertyPath: m_AnchorMax.y
@@ -8051,5 +8083,5 @@ MonoBehaviour:
   drscheck: {fileID: 789392275962078100}
   drs: 
   concat: 
-  code: Left Anterior Upper Arm
+  code: Upper Arm - Upper Left Anterior
   loc: 1
