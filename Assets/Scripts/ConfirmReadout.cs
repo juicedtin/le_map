@@ -31,12 +31,19 @@ public class ConfirmReadout : MonoBehaviour
 
     void TaskOnClick()
     {
-        if (drscheck.GetComponent<Toggle>().isOn)
+        if (loc != 3)
         {
-            drs = "Dermal Rim Sign Present";
+            if (drscheck.GetComponent<Toggle>().isOn)
+            {
+                drs = "Dermal Rim Sign Present";
+            }
+            else
+            {
+                drs = "Dermal Rim Sign Not Present";
+            }
         } else
         {
-            drs = "Dermal Rim Sign Not Present";
+            drs = "Not applicable - L/R Hand";
         }
         concat = code + ": Edema Severity: " + edemaSlider.GetComponent<Slider>().value + " Fat Severity: " + fatSlider.GetComponent<Slider>().value + " " + drs + System.Environment.NewLine;
         Debug.Log("Triggered, readout ported");
