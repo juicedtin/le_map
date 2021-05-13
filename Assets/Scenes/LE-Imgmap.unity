@@ -567,6 +567,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 11500000, guid: 267a2e7e91ad63541a29b75bcc36c9da, type: 3}
+    - target: {fileID: 4555223564561999580, guid: c53417754d1ed2246820c449138390f5, type: 3}
+      propertyPath: target1All
+      value: 
+      objectReference: {fileID: 190378527}
+    - target: {fileID: 4555223564561999580, guid: c53417754d1ed2246820c449138390f5, type: 3}
+      propertyPath: target2All
+      value: 
+      objectReference: {fileID: 190378526}
+    - target: {fileID: 4555223564561999580, guid: c53417754d1ed2246820c449138390f5, type: 3}
+      propertyPath: target3All
+      value: 
+      objectReference: {fileID: 190378525}
+    - target: {fileID: 4555223564561999580, guid: c53417754d1ed2246820c449138390f5, type: 3}
+      propertyPath: copyAll
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6191168152868295097, guid: c53417754d1ed2246820c449138390f5, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
