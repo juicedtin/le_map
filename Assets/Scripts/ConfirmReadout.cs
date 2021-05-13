@@ -78,4 +78,19 @@ public class ConfirmReadout : MonoBehaviour
         Debug.Log(readout);
         return readout;
     }
+
+    string ovewriteReadoutLoop(string readout, string code)
+    {
+        int indexStart = readout.IndexOf(code);
+        int deleteIndex = readout.IndexOf("\n") - indexStart;
+        while (indexStart > -1)
+        {
+            Debug.Log(deleteIndex + " " + indexStart);
+            readout = readout.Remove(indexStart, deleteIndex + 1);
+            Debug.Log(readout);
+            return readout;
+            indexStart = readout.IndexOf(code);
+            deleteIndex = readout.IndexOf("\n") - indexStart;
+        }
+    }
 }
