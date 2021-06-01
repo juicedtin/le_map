@@ -51,15 +51,12 @@ public class ConfirmReadout : MonoBehaviour
         switch (loc)
         {
             case 1:
-                targetUA.GetComponent<Text>().text = overwriteReadout(targetUA.GetComponent<Text>().text, code);
                 targetUA.GetComponent<Text>().text += concat;
                 break;
             case 2:
-                targetLA.GetComponent<Text>().text = overwriteReadout(targetLA.GetComponent<Text>().text, code);
                 targetLA.GetComponent<Text>().text += concat;
                 break;
             case 3:
-                targetH.GetComponent<Text>().text = overwriteReadout(targetH.GetComponent<Text>().text, code);
                 targetH.GetComponent<Text>().text += concat;
                 break;
         }
@@ -79,18 +76,21 @@ public class ConfirmReadout : MonoBehaviour
         return readout;
     }
 
-    string ovewriteReadoutLoop(string readout, string code)
+    string overwriteReadoutLoop(string readout, string code)
     {
         int indexStart = readout.IndexOf(code);
-        int deleteIndex = readout.IndexOf("\n") - indexStart;
-        while (indexStart > -1)
+        int delLength = 0;
+        if (readout.Contains("Not Present")) {
+            delLength = 93;
+        } else
         {
-            Debug.Log(deleteIndex + " " + indexStart);
-            readout = readout.Remove(indexStart, deleteIndex + 1);
-            Debug.Log(readout);
-            return readout;
-            indexStart = readout.IndexOf(code);
-            deleteIndex = readout.IndexOf("\n") - indexStart;
+            delLength = 89;
         }
+        while (indexStart != -1)
+        {
+            readout.Remove(indexStart, indexStart + delLength);
+            indexStart = readout.IndexOf(code);
+        }
+        return readout;
     }
 }
