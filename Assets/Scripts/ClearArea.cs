@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ClearArea : MonoBehaviour
 {
+    public Button targetButton;
     public GameObject textUA;
     public GameObject textLA;
     public GameObject textH;
@@ -13,7 +14,8 @@ public class ClearArea : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Button btn = targetButton.GetComponent<Button>();
+        btn.onClick.AddListener(TaskOnClick);
     }
 
     // Update is called once per frame
@@ -22,8 +24,9 @@ public class ClearArea : MonoBehaviour
         
     }
 
-    void onClick()
+    void TaskOnClick()
     {
+        Debug.Log("Section " + id + " cleared");
         switch (id) 
         {
             case 0:
