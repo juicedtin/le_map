@@ -11,6 +11,8 @@ public class VisualizationPort : MonoBehaviour
     float eMax;
     float fMax;
     float fMin;
+    //Delimiter?
+    string delim;
     /*Case-based colors, current implementation is done with color lerp
     Color none = new Color(0.3114324, 0.7735849, 0.0105415, 1);
     Color mild = new Color(0.8962264, 0.7194716. 0, 1);
@@ -28,6 +30,10 @@ public class VisualizationPort : MonoBehaviour
         
     }
 
+    void TaskOnClick()
+    {
+
+    }
 
     void RedCapPort(float eVal, float fVal, bool drs, GameObject targetObject)
     {
