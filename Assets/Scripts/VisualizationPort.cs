@@ -7,6 +7,7 @@ public class VisualizationPort : MonoBehaviour
 {
     string targetTag;
     GameObject targetObject;
+    GameObject targetBtn;
     float eMin;
     float eMax;
     float fMax;
@@ -21,7 +22,8 @@ public class VisualizationPort : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Button parseButton = targetBtn.GetComponent<Button>();
+        parseButton.onClick.AddListener(TaskOnClick);
     }
 
     // Update is called once per frame
