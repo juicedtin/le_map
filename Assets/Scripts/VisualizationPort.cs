@@ -168,14 +168,14 @@ public class VisualizationPort : MonoBehaviour
 
         //Set slider color for easy viewing by interpolating the inputted value between max and min inputs.
         ColorBlock eLerp = eSlider.GetComponent<Slider>().colors;
-        eLerp.normalColor = Color.Lerp(Color.green, Color.red, (data.getEdema() - eMin) / (eMax - eMin)); ;
+        eLerp.normalColor = Color.Lerp(Color.green, Color.red, (data.getEdema() - eMin) / (eMax - eMin));
         eSlider.GetComponent<Slider>().colors = eLerp;
         ColorBlock fLerp = fSlider.GetComponent<Slider>().colors;
-        fLerp.normalColor = Color.Lerp(Color.green, Color.red, (data.getFat() - fMin) / (fMax - fMin)); ;
+        fLerp.normalColor = Color.Lerp(Color.green, Color.red, (data.getFat() - fMin) / (fMax - fMin));
         fSlider.GetComponent<Slider>().colors = fLerp;
         
         //Special case for DRS (due to checkbox/bool)
-        ColorBlock drsLerp = new ColorBlock();
+        ColorBlock drsLerp = drsBox.GetComponent<Toggle>().colors;
         if (data.getDRS())
         {
             drsLerp.normalColor = Color.red;
@@ -240,7 +240,8 @@ public class VisualizationPort : MonoBehaviour
             Debug.Log("Unknown ID string build error, appending default Upper to end of GameObject ID");
             Debug.Log(targetID.ToString());
         }
-
+        targetID.Insert(0, "InputScreen ");
+        Debug.Log(targetID.ToString());
 
         ScanData output = new ScanData(edemaVal, fatVal, drsCheck, targetID.ToString());
         return output;
