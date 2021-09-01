@@ -5,6 +5,10 @@ using UnityEngine;
 using System.Globalization;
 using System.Text;
 
+
+//Define ScanData class that includes edema, fat, and drs values along with an ObjectID used to find
+//reference GameObject in the scene for porting. 
+//No child methods, only getters/setters
 public class ScanData
 {
     float edemaValue;
@@ -115,20 +119,29 @@ public class VisualizationPort : MonoBehaviour
 
         //Port text into string for delimiterization
         textInput = rcInput.GetComponent<InputField>().text;
+        string linedInput[] = textInput.Split(new string[] { "\n", "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
+
+
+        
+        GameObject taggedObject = GameObject.Find(targetTag);
+        for (string s in linedInput)
+        {
+            
+        }
     }
 
     //Port inputs onto visualizationa and change color accordingly for one single GameObject/datapoint.
     //Takes values eVal for edema, fVal for fat, and drs for drs y/n, and a target GameObject
     //Returns void
-    void RedCapPort(float eVal, float fVal, bool drs, GameObject targetObject)
+    void RedCapPort(ScanData data, GameObject targetObject)
     {
         //Find and assign data to each GameObject for visualization
         GameObject eSlider = targetObject.transform.Find("EdemaSlider").gameObject;
         GameObject fSlider = targetObject.transform.Find("FatSlider").gameObject;
         GameObject drsBox =  targetObject.transform.Find("DRS").gameObject;
-        eSlider.GetComponent<Slider>().value = eVal;
-        fSlider.GetComponent<Slider>().value = fVal;
-        drsBox.GetComponent<Toggle>().isOn = drs;
+        eSlider.GetComponent<Slider>().value = data.getEdema();
+        fSlider.GetComponent<Slider>().value = data.getFat();
+        drsBox.GetComponent<Toggle>().isOn = data.getDRS();
 
         //Set slider color for easy viewing by interpolating the inputted value between max and min inputs.
         ColorBlock eLerp = eSlider.GetComponent<Slider>().colors;
@@ -150,6 +163,7 @@ public class VisualizationPort : MonoBehaviour
         drsBox.GetComponent<Toggle>().colors = drsLerp;
     }
 
+    //
     ScanData parseRcInput(string input, char delim)
     {
         float edemaVal = 0;
@@ -171,6 +185,7 @@ public class VisualizationPort : MonoBehaviour
         {
             Debug.Log("Unknown case in idChars identification/piping");
         }
+        t
         ScanData output = new ScanData(edemaVal, fatVal, drsCheck, targetID.ToString());
         return output;
     }
