@@ -78,16 +78,14 @@ public class ScanData
 
 public class VisualizationPort : MonoBehaviour
 {
-    string targetTag;
     string textInput;
 
-    GameObject targetObject;
-    GameObject targetBtn;
-    GameObject rcInput;
-    GameObject eMinInput;
-    GameObject eMaxInput;
-    GameObject fMinInput;
-    GameObject fMaxInput;
+    public GameObject targetBtn;
+    public GameObject rcInput;
+    public GameObject eMinInput;
+    public GameObject eMaxInput;
+    public GameObject fMinInput;
+    public GameObject fMaxInput;
 
     float eMin;
     float eMax;
