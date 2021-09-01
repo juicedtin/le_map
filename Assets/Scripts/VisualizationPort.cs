@@ -146,7 +146,13 @@ public class VisualizationPort : MonoBehaviour
             }
         }
 
-        GameObject taggedObject = GameObject.Find(targetTag);
+        //Run through every list, convert to array, and feed into parseRcInput and RedCapPort
+        foreach (List<String> uniqueLines in groupedScanData)
+        {
+            ScanData tempData = parseRcInput(uniqueLines.ToArray(), ':');
+            GameObject taggedObject = GameObject.Find(tempData.getID());
+            RedCapPort(tempData, eMax, eMin, fMax, fMin, taggedObject);
+        }
     }
 
     //Port inputs onto visualizationa and change color accordingly for one single GameObject/datapoint.
