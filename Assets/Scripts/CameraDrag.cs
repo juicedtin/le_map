@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraDrag : MonoBehaviour
 {
-    public float dragSpeed = 2;
+    public float dragSpeed = 10;
     private Vector3 dragOrigin;
     // Start is called before the first frame update
     void Start()
