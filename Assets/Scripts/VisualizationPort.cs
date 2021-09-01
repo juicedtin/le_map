@@ -4,6 +4,8 @@ using UnityEngine.UI;
 using UnityEngine;
 using System.Globalization;
 using System.Text;
+using System;
+using System.Linq;
 
 
 //Define ScanData class that includes edema, fat, and drs values along with an ObjectID used to find
@@ -119,21 +121,38 @@ public class VisualizationPort : MonoBehaviour
 
         //Port text into string for delimiterization
         textInput = rcInput.GetComponent<InputField>().text;
-        string linedInput[] = textInput.Split(new string[] { "\n", "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
+        string[] linedInput = textInput.Split(new string[] { "\n", "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
 
-
-        
-        GameObject taggedObject = GameObject.Find(targetTag);
-        for (string s in linedInput)
+        //Loop through entire input and categorize all similar tags for ScanData parsing
+        List<List<String>> groupedScanData = new List<List<String>>();
+        foreach (string line in linedInput)
         {
-            
+            string threeID = string.Join(" ", line.Split().Take(3));
+            bool uniqueThreeID = true;
+            foreach (List<String> searchQ in groupedScanData)
+            {
+                string searchQthreeID = string.Join(" ", searchQ[0].Split().Take(3));
+                if (threeID.Equals(searchQthreeID))
+                {
+                    searchQ.Add(line);
+                    uniqueThreeID = false;
+                }
+            }
+            if (uniqueThreeID)
+            {
+                List<String> newThreeIDLine = new List<String>();
+                newThreeIDLine.Add(line);
+                groupedScanData.Add(newThreeIDLine);
+            }
         }
+
+        GameObject taggedObject = GameObject.Find(targetTag);
     }
 
     //Port inputs onto visualizationa and change color accordingly for one single GameObject/datapoint.
     //Takes values eVal for edema, fVal for fat, and drs for drs y/n, and a target GameObject
     //Returns void
-    void RedCapPort(ScanData data, GameObject targetObject)
+    void RedCapPort(ScanData data, float eMax, float eMin, float fMax, float fMin, GameObject targetObject)
     {
         //Find and assign data to each GameObject for visualization
         GameObject eSlider = targetObject.transform.Find("EdemaSlider").gameObject;
@@ -145,15 +164,15 @@ public class VisualizationPort : MonoBehaviour
 
         //Set slider color for easy viewing by interpolating the inputted value between max and min inputs.
         ColorBlock eLerp = eSlider.GetComponent<Slider>().colors;
-        eLerp.normalColor = Color.Lerp(Color.green, Color.red, (eVal - eMin) / (eMax - eMin));
+        eLerp.normalColor = Color.Lerp(Color.green, Color.red, (data.getEdema() - eMin) / (eMax - eMin)); ;
         eSlider.GetComponent<Slider>().colors = eLerp;
         ColorBlock fLerp = fSlider.GetComponent<Slider>().colors;
-        fLerp.normalColor = Color.Lerp(Color.green, Color.red, (eVal - eMin) / (eMax - eMin));
+        fLerp.normalColor = Color.Lerp(Color.green, Color.red, (data.getFat() - fMin) / (fMax - fMin)); ;
         fSlider.GetComponent<Slider>().colors = fLerp;
         
         //Special case for DRS (due to checkbox/bool)
         ColorBlock drsLerp = new ColorBlock();
-        if (drs)
+        if (data.getDRS())
         {
             drsLerp.normalColor = Color.red;
         } else
@@ -163,29 +182,62 @@ public class VisualizationPort : MonoBehaviour
         drsBox.GetComponent<Toggle>().colors = drsLerp;
     }
 
-    //
-    ScanData parseRcInput(string input, char delim)
+    //Methods that parses RedCap input, outputting a ScanData instance from a single
+    //line input string of RedCap and delimiter separating identifier from data.
+    ScanData parseRcInput(string[] sameIDInput, char delim)
     {
+        //Establish values to be piped into final output ScanData
         float edemaVal = 0;
         float fatVal = 0;
         bool drsCheck = false;
-        string[] splitInput = input.Split(delim);
-        string[] idChars = splitInput[0].Split(' ');
+
+        foreach (string input in sameIDInput)
+        {
+            //Split the input string into the identifier segment, and the data segment.
+            string[] splitInput = input.Split(delim);
+            //Further split data segment into single-word identifications, which will be used to build ID string
+            string[] idChars = splitInput[0].Split();
+
+            //Parse the last word of the identification half of the string, and pipe the subsequent values into the ScanData output
+            if (idChars[idChars.Length - 1].ToLower().Equals("edema"))
+            {
+                edemaVal = float.Parse(splitInput[1].Replace(" ", string.Empty), CultureInfo.InvariantCulture.NumberFormat);
+            }
+            else if (idChars[idChars.Length - 1].ToLower().Equals("fat"))
+            {
+                fatVal = float.Parse(splitInput[1].Replace(" ", string.Empty), CultureInfo.InvariantCulture.NumberFormat);
+            }
+            else if (idChars[idChars.Length - 1].ToLower().Equals("drs"))
+            {
+                drsCheck = bool.Parse(splitInput[1].Replace(" ", string.Empty));
+            }
+            else
+            {
+                Debug.Log("Unknown case in idChars identification/piping");
+            }
+        }
+        //For performance, assign targetID once after loop as sameIDINput will all have near-identicial identifier segments
         StringBuilder targetID = new StringBuilder("A-");
-        if (idChars[idChars.Length - 1].ToLower().Equals("edema"))
+        string[] IDTempSplit = sameIDInput[0].Split(delim);
+        string[] IDTempWordSplit = IDTempSplit[0].Split();
+        //Build ID string according to Unity Scene naming: InputScreen ULAA-U = Upper Left Arm Anterior - Upper
+        targetID.Insert(1, IDTempWordSplit[2].Substring(0, 1));
+        targetID.Insert(0, IDTempWordSplit[0].Substring(0, 1));
+        targetID.Insert(0, IDTempWordSplit[1].Substring(0, 1));
+        if (IDTempWordSplit[1].EndsWith("1"))
         {
-            edemaVal = float.Parse(splitInput[1].Replace(" ", string.Empty), CultureInfo.InvariantCulture.NumberFormat);
-        } else if (idChars[idChars.Length - 1].ToLower().Equals("fat"))
+            targetID.Append('U');
+        } else if (IDTempWordSplit[1].EndsWith("2"))
         {
-            fatVal = float.Parse(splitInput[1].Replace(" ", string.Empty), CultureInfo.InvariantCulture.NumberFormat);
-        } else if (idChars[idChars.Length - 1].ToLower().Equals("drs"))
-        {
-            drsCheck = bool.Parse(splitInput[1].Replace(" ", string.Empty));
+            targetID.Append('L');
         } else
         {
-            Debug.Log("Unknown case in idChars identification/piping");
+            targetID.Append('U');
+            Debug.Log("Unknown ID string build error, appending default Upper to end of GameObject ID");
+            Debug.Log(targetID.ToString());
         }
-        t
+
+
         ScanData output = new ScanData(edemaVal, fatVal, drsCheck, targetID.ToString());
         return output;
     }
